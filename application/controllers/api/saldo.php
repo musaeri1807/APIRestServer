@@ -14,7 +14,7 @@ class Saldo extends REST_Controller
        parent::__construct();
        $this->load->model('M_Saldo','saldo');
    }
-    public function index_get()
+    public function customers_get()
     {
 
         $id=$this->get('member_id');

@@ -5,7 +5,7 @@ class M_Saldo extends CI_Model
     public function getSaldo($id = null)
     {
         if ($id===null) {
-            return $this->db->get('tbltrxmutasisaldo',10)->result_array();
+            return $this->db->get('tbltrxmutasisaldo',5)->result_array();
             // $sql="SELECT *FROM tbltrxmutasisaldo WHERE field_member_id='085799990456'";
             
             // $data = $this->db->query($sql);
