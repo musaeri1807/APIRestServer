@@ -19,11 +19,11 @@ class Saldo extends REST_Controller
 
         $id=$this->get('member_id');
         if ($id===null) {
-            //$saldo =$this->saldo->getSaldo();  
-            $this->response([
-                'Status'=>false,                
-                'Message'=>'No ID saldo were found'
-            ],REST_Controller::HTTP_NOT_FOUND);          
+            $saldo =$this->saldo->getSaldo();  
+            // $this->response([
+            //     'Status'=>false,                
+            //     'Message'=>'No ID saldo were found'
+            // ],REST_Controller::HTTP_NOT_FOUND);          
         }else{
             $saldo =$this->saldo->getSaldo($id);
         }
