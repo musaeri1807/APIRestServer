@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -18,7 +19,7 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function index2()
 	{
 		$this->load->helper('url');
 
