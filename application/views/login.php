@@ -13,6 +13,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $secretKey = "6Lc9f84ZAAAAAEBSnQvoHzWcPvD0Tqcn0HD0izsO"; //nyimasantam.my.id
 } elseif ($_SERVER['SERVER_NAME'] == 'musaeri.my.id') {
     $secretKey = "6LdCXhcbAAAAABj_ExKExLI_0h_1uz7tSCYdDHM-"; //musaeri.my.id
+} elseif ($_SERVER['SERVER_NAME'] == 'my.musaeri.my.id') {
+    $secretKey = "6LcVVqAbAAAAAD5hBRS3bm09fWt_6EKYEE6M65JE"; //musaeri.my.id
 }
 
 // $responseKey = $_POST['g-recaptcha-response'];
@@ -100,6 +102,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                     echo '<div class="g-recaptcha" data-sitekey="6Lc9f84ZAAAAANDLO3VFPiJEsa1trW4PwdE5fX0U"></div>';
                                 } elseif ($_SERVER['SERVER_NAME'] == 'musaeri.my.id') {
                                     echo '<div class="g-recaptcha" data-sitekey="6LdCXhcbAAAAAKhaHQouGGvtU6u4fJUSx8dpQUGv"></div>';
+                                } elseif ($_SERVER['SERVER_NAME'] == 'my.musaeri.my.id') {
+                                    echo '<div class="g-recaptcha" data-sitekey="6LcVVqAbAAAAAAwZZhTx2O_hJx4es6gPFIpWSHBu"></div>';
                                 }
 
                                 ?>
