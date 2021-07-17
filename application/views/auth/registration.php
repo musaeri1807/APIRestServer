@@ -75,45 +75,73 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                             <!--    <div class="form-block mx-auto"> -->
 
                             <div class="text-center mt-1">
-                                <img src="https://nyimasantam.my.id/image/logonyimas.png" width="300">
-                                <h3>Login to <strong>Customer</strong></h3>
-                                <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>  -->
+                                <img src="https://nyimasantam.my.id/image/iconnyimas.png" width="100">
+                                <br>
+                                <br>
+                                <br>
+                                <h3 style="text-align: left;"></h3>
+
+                                <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
                             </div>
+
                             <form method="post" class="form-horizontal">
                                 <div class="form-group first">
                                     <!-- <label for="username">Username</label> -->
                                     <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
-                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Username OR Email" />
+                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Name" />
                                 </div>
-                                <div class="form-group last mb-3">
+                                <div class="form-group first">
+                                    <!-- <label for="username">Username</label> -->
+                                    <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
+                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Email" />
+                                </div>
+                                <div class="form-group first">
+                                    <!-- <label for="username">Username</label> -->
+                                    <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
+                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Handphone" />
+                                </div>
+                                <div class="form-group first last mb-3">
                                     <!-- <label for="password">Password</label> -->
                                     <!-- <input type="password" class="form-control" placeholder="Your Password" id="password"> -->
                                     <input type="password" name="txt_password" class="form-control" placeholder="Password" />
                                 </div>
-
-                                <?php
-                                if ($_SERVER['SERVER_NAME'] == 'localhost') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6LfJec4ZAAAAAPYZt2c-p6gu37D6weYdI8Kw1LqA"></div>';
-                                } elseif ($_SERVER['SERVER_NAME'] == 'urunanmu.my.id') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6Ldi1lsaAAAAALAritGVdd7xOXdf_mglkssD9RjR"></div>';
-                                } elseif ($_SERVER['SERVER_NAME'] == 'nyimasantam.com') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6Lf6eR0aAAAAAAXiPck77ymXUnqtLYj1dvtlli1B"></div>';
-                                } elseif ($_SERVER['SERVER_NAME'] == 'nyimasantam.my.id') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6Lc9f84ZAAAAANDLO3VFPiJEsa1trW4PwdE5fX0U"></div>';
-                                } elseif ($_SERVER['SERVER_NAME'] == 'musaeri.my.id') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6LdCXhcbAAAAAKhaHQouGGvtU6u4fJUSx8dpQUGv"></div>';
-                                } elseif ($_SERVER['SERVER_NAME'] == 'my.musaeri.my.id') {
-                                    echo '<div class="g-recaptcha" data-sitekey="6LcVVqAbAAAAAAwZZhTx2O_hJx4es6gPFIpWSHBu"></div>';
-                                }
-
-                                ?>
-
-                                <div class="d-sm-flex mb-5 align-items-center">
+                                <div class="form-group first">
+                                    <input type="checkbox" name="txt_checkbox" aria-label="Checkbox for following text input"> Saya menyetujui
+                                    <a href="" style="color: blue;">Persetujuan Pengguna </a>dan <a href="" style="color: blue;">Syarat & Ketentuan</a> yang berlaku
+                                    <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                                 </div>
-                                <input type="submit" name="btn_login" class="btn btn-primary" value="Login">
+                                <div class="d-sm-flex mb-4 align-items-center">
+                                    <?php
+                                    if ($_SERVER['SERVER_NAME'] == 'localhost') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6LfJec4ZAAAAAPYZt2c-p6gu37D6weYdI8Kw1LqA"></div>';
+                                    } elseif ($_SERVER['SERVER_NAME'] == 'urunanmu.my.id') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6Ldi1lsaAAAAALAritGVdd7xOXdf_mglkssD9RjR"></div>';
+                                    } elseif ($_SERVER['SERVER_NAME'] == 'nyimasantam.com') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6Lf6eR0aAAAAAAXiPck77ymXUnqtLYj1dvtlli1B"></div>';
+                                    } elseif ($_SERVER['SERVER_NAME'] == 'nyimasantam.my.id') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6Lc9f84ZAAAAANDLO3VFPiJEsa1trW4PwdE5fX0U"></div>';
+                                    } elseif ($_SERVER['SERVER_NAME'] == 'musaeri.my.id') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6LdCXhcbAAAAAKhaHQouGGvtU6u4fJUSx8dpQUGv"></div>';
+                                    } elseif ($_SERVER['SERVER_NAME'] == 'my.musaeri.my.id') {
+                                        echo '<div class="g-recaptcha" data-sitekey="6LcVVqAbAAAAAAwZZhTx2O_hJx4es6gPFIpWSHBu"></div>';
+                                    }
+
+                                    ?>
+                                </div>
+
+                                <input type="submit" name="btn_register" class="btn btn-primary" value="Register">
                                 <!-- <a href="settingdatabase" type="submit" class="btn btn-primary">Connection</a> -->
                                 <input type="submit" value="Forgot Password" class="btn btn-success">
                             </form>
+
+                            <hr>
+                            Sudah Punya Akun Nyimas Antam ? <a href="<?= base_url('auth'); ?>">Silakan Login</a>
+
+                            <br>
+                            <br>
+                            <br>
+
+
                         </div>
                     </div>
                 </div>
