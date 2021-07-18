@@ -79,16 +79,37 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                 <br>
                                 <br>
                                 <br>
+                                <?php
+                                if ($this->session->flashdata('message')) {
+                                ?>
+                                    <div class="alert alert-danger">
+                                        <?php
+                                        echo $this->session->flashdata('message');
+                                        ?>
+                                    </div>
+                                <?php
+                                }
+
+                                if ($this->session->flashdata('success_message')) {
+                                ?>
+                                    <div class="alert alert-success">
+                                        <?php
+                                        echo $this->session->flashdata('success_message');
+                                        ?>
+                                    </div>
+                                <?php
+                                }
+                                ?>
                                 <h3 style="text-align: left;">Hi Silakan Login</h3>
                                 <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
 
                             </div>
 
-                            <form method="post" class="form-horizontal">
+                            <form method="post" class="form-horizontal" action="<?php echo base_url('auth'); ?>">
                                 <div class="form-group first">
                                     <!-- <label for="username">Username</label> -->
                                     <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
-                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Username OR Email" />
+                                    <input type="text" name="txt_username" class="form-control" placeholder="Your Email Or Handphone" />
                                 </div>
                                 <div class="form-group last mb-3">
                                     <!-- <label for="password">Password</label> -->
@@ -114,9 +135,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
                                     ?>
                                 </div>
-                                <input type="submit" name="btn_login" class="btn btn-primary" value="Login">
-                                <a href="<?= base_url('auth/forgotpassword'); ?>" style="text-align: right;">Forgot Password</a>
-                                <input type="submit" value="Forgot Password" class="btn btn-success" href="<?= base_url('auth/forgotpassword'); ?>">
+                                <input type="submit" name="btn_login" class="btn btn-primary" value="Login">&emsp;&emsp;&emsp;&emsp;
+                                <a href="<?= base_url('auth/forgotpassword'); ?>" style="text-decoration: none">Forgot Password ?</a>
+
                             </form>
 
                             <hr>

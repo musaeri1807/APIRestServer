@@ -129,9 +129,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                     ?>
                                 </div>
 
-                                <input type="submit" name="btn_register" class="btn btn-primary" value="Register">
-                                <!-- <a href="settingdatabase" type="submit" class="btn btn-primary">Connection</a> -->
-                                <input type="submit" value="Forgot Password" class="btn btn-success">
+                                <input type="submit" name="btn_register" class="btn btn-primary" value="Register">&emsp;&emsp;&emsp;&emsp;
+                                <a href="<?= base_url('auth/forgotpassword'); ?>" style="text-decoration: none">Forgot Password ?</a>
                             </form>
 
                             <hr>
