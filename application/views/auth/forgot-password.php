@@ -79,7 +79,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                 <br>
                                 <br>
                                 <br>
-                                <h3 style="text-align: left;">Forgot your password ?</h3>
+                                <h5 style="text-align: left;">Forgot your password ?</h5>
                                 <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
 
                             </div>

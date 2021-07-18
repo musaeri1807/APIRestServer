@@ -59,7 +59,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     <!-- Style -->
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/assetlogin/css/style.css">
 
-    <title>NYIMASANTAM</title>
+    <title><?= $title; ?></title>
 </head>
 
 <body>
@@ -77,14 +77,33 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                             <div class="text-center mt-1">
                                 <img src="https://nyimasantam.my.id/image/iconnyimas.png" width="100">
                                 <br>
-                                <br>
-                                <br>
-                                <h3 style="text-align: left;"></h3>
+                                <?php
+                                if ($this->session->flashdata('message')) {
+                                ?>
+                                    <div class="alert alert-danger">
+                                        <?php
+                                        echo $this->session->flashdata('message');
+                                        ?>
+                                    </div>
+                                <?php
+                                }
 
+                                if ($this->session->flashdata('success_message')) {
+                                ?>
+                                    <div class="alert alert-success">
+                                        <?php
+                                        echo $this->session->flashdata('success_message');
+                                        ?>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                                <h3 style="text-align: left;"></h3>
+                                <br>
                                 <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
                             </div>
 
-                            <form method="post" class="form-horizontal">
+                            <form method="post" class="form-horizontal" action="<?php echo base_url('auth/registration') ?>">
                                 <div class="form-group first">
                                     <!-- <label for="username">Username</label> -->
                                     <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
@@ -104,6 +123,17 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                     <!-- <label for="password">Password</label> -->
                                     <!-- <input type="password" class="form-control" placeholder="Your Password" id="password"> -->
                                     <input type="password" name="txt_password" class="form-control" placeholder="Password" />
+                                </div>
+                                <div class="form-group first">
+
+                                    <select class="form-control-select form-select-lg mb-3" aria-label="form-select-lg">
+                                        <option selected> --Select Branch-- </option>
+                                        <?php foreach ($branch as $row){?>
+                                        <!-- <option value="<?= $row->field_branch_id; ?>"><?= $row->field_branch_name; ?></option> -->
+                                        <option value="<?= $row['field_branch_id']; ?>"><?= $row['field_branch_name']; ?></option>
+                                        <?php } ?>
+                                        
+                                    </select>
                                 </div>
                                 <div class="form-group first">
                                     <input type="checkbox" name="txt_checkbox" aria-label="Checkbox for following text input"> Saya menyetujui

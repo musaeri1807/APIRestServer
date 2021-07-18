@@ -67,10 +67,10 @@ class Captcha extends CI_Controller
                 echo $storeData['gender'];
                 echo '<br>';
 
-                $customer = $this->model->getdata();
+                $customer = $this->model->getdata()->result_array();
 
-                //var_dump($customer);
-                echo $customer['field_customer_id'];
+                var_dump($customer);
+                // echo $customer['field_customer_id'];
 
                 // $this->captcha_model->insert($storeData);
 
@@ -79,6 +79,32 @@ class Captcha extends CI_Controller
                 // redirect('captcha');
                 //echo "Jika data email atau hp tidak ada insert ke database jika lain keluarkan pesan data sudah ada ";
                 //echo " create Session Login";
+
+                // $this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[15]');
+                // $this->form_validation->set_rules('password', 'Password', 'required');
+
+                // if ($this->form_validation->run() == TRUE) {
+                //     $username = trim($_POST['username']);
+                //     $password = trim($_POST['password']);
+
+                //     $data = $this->M_auth->login($username, $password);
+
+                //     if ($data == false) {
+                //         $this->session->set_flashdata('error_msg', 'Username / Password Anda Salah.');
+                //         redirect('Auth');
+                //     } else {
+                //         $session = [
+                //             'userdata' => $data,
+                //             'status' => "Loged in"
+                //         ];
+                //         $this->session->set_userdata($session);
+                //         redirect('Home');
+                //     }
+                // } else {
+                //     $this->session->set_flashdata('error_msg', validation_errors());
+                //     redirect('Auth');
+                // }
+                
             } else {
                 $this->session->set_flashdata('message', 'Validation Fail Try Again');
                 redirect('captcha');

@@ -17,18 +17,6 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $secretKey = "6LcVVqAbAAAAAD5hBRS3bm09fWt_6EKYEE6M65JE"; //musaeri.my.id
 }
 
-// $responseKey = $_POST['g-recaptcha-response'];
-// $userIP = $_SERVER['REMOTE_ADDR'];
-// $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
-// $response1 = file_get_contents($url);
-// $response = json_decode($response1);
-// if ($responseKey == 0) {
-//     $errorMsg[] = "Harap Periksa reCAPTCHA";
-// }
-
-// if ($response->success) {
-// } //google c
-
 
 ?>
 
@@ -69,7 +57,6 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <!-- <div class="row align-items-center justify-content-center"> -->
                     <div class="col-md-6">
                         <div class="form mx-auto">
                             <!--    <div class="form-block mx-auto"> -->
@@ -77,8 +64,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                             <div class="text-center mt-1">
                                 <img src="https://nyimasantam.my.id/image/iconnyimas.png" width="100">
                                 <br>
-                                <br>
-                                <br>
+
                                 <?php
                                 if ($this->session->flashdata('message')) {
                                 ?>
@@ -101,11 +87,12 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
                                 }
                                 ?>
                                 <h3 style="text-align: left;">Hi Silakan Login</h3>
-                                <!-- <p class="mb-1">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
+
+                                <br>
 
                             </div>
 
-                            <form method="post" class="form-horizontal" action="<?php echo base_url('auth'); ?>">
+                            <form method="post" class="form-horizontal" action="<?php echo base_url('auth/login'); ?>">
                                 <div class="form-group first">
                                     <!-- <label for="username">Username</label> -->
                                     <!-- <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username"> -->
