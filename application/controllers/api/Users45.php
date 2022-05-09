@@ -17,10 +17,23 @@ class Users45 extends REST_Controller
     public function index_get()
     {
 
-        $id = $this->get('id');
-        // $password = $this->get('field_password');
+        $email = $this->get('email');
+        //$email = 'musaeri1807@gmail.com';
+        $password = $this->get('password');
 
-        if ($id === null) {
+        // // $data['password'] = $this->M_users->getUsers($email);
+
+        // $password = $this->M_users->getUsers($email);
+
+        // // extract($password);
+        // // print_r($field_password);
+
+        // var_dump($password);
+        // die();
+
+
+
+        if ($email === null OR $password===null) {
             # code...
             // $customer = $this->M_users->getUsers();
 
@@ -30,8 +43,7 @@ class Users45 extends REST_Controller
             ], REST_Controller::HTTP_NOT_FOUND);
         } else {
             # code...
-            $customer = $this->M_users->getUsers($id);
-          
+            $customer = $this->M_users->getUsers($email, $password);
         }
 
 
