@@ -18,7 +18,7 @@ class Customer extends REST_Controller
     {
 
         $id=$this->get('id');
-        if ($id===null) {
+        if ($id=='') {
             // $customer =$this->custm->getCustomer();  
             $this->response([
                 'Status'=>false,                
@@ -27,7 +27,7 @@ class Customer extends REST_Controller
         }else{
             $customer =$this->custm->getCustomer($id);
         }
-        // var_dump($customer);
+        var_dump($customer);
         // if ($customer) {
         //     $this->response($customer, REST_Controller::HTTP_OK);
         // }

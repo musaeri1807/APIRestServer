@@ -5,7 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Rest_server extends CI_Controller
 {
 
-    public function index2()
+    public function index()
     {
         $this->load->helper('url');
 

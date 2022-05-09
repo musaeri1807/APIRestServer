@@ -79,7 +79,7 @@ if ($_SERVER['SERVER_NAME']=='localhost') {
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'vps01na',
+		'database' => 'vpsbsp',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,
