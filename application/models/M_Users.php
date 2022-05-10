@@ -1,5 +1,7 @@
 <?php
-class M_users extends CI_model
+
+
+class M_users extends CI_Model
 {
     public function getUsers($email, $password = NULL)
     {
@@ -8,14 +10,11 @@ class M_users extends CI_model
             $SQL = "SELECT * FROM tbluserlogin WHERE field_email='{$email}'";
             $data = $this->db->Query($SQL);
             return $data->result_array();
-        }else{
+        } else {
             $SQL = "SELECT * FROM tbluserlogin WHERE field_email='{$email}' AND Password='{$password}'";
             $data = $this->db->Query($SQL);
             return $data->result_array();
-
         }
-
-
 
         // $SQL="SELECT * FROM tbluserlogin";
         // $data=$this->db->Query($SQL);

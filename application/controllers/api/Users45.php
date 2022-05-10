@@ -12,8 +12,9 @@ class Users45 extends REST_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_users');
+        $this->load->model('M_users','U');
     }
+
     public function index_get()
     {
 
@@ -33,7 +34,7 @@ class Users45 extends REST_Controller
 
 
 
-        if ($email === null OR $password===null) {
+        if ($email === null or $password === null) {
             # code...
             // $customer = $this->M_users->getUsers();
 
@@ -43,7 +44,7 @@ class Users45 extends REST_Controller
             ], REST_Controller::HTTP_NOT_FOUND);
         } else {
             # code...
-            $customer = $this->M_users->getUsers($email, $password);
+            $customer = $this->U->getUsers($email, $password);
         }
 
 
