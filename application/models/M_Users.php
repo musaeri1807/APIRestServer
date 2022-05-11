@@ -1,6 +1,6 @@
 <?php
 
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 class M_users extends CI_Model
 {
     public function getUsers($email, $password = NULL)
